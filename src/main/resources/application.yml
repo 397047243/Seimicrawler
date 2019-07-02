@@ -1,0 +1,19 @@
+seimi:
+  crawler:
+    enabled: true   #\u542F\u52A8\u722C\u866B
+    names: basic    #\u6307\u5B9A\u722C\u866B
+spring:
+  datasource:   #\u6570\u636E\u6E90
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/seimicrawler?serverTimezone=Asia/Shanghai
+      username: root
+      password: root321!
+      initial-size: 50      #\u521D\u59CB\u5316\u8FDE\u63A5\u6570
+      max-active: 200       #\u6700\u5927\u8FDE\u63A5\u6570
+      max-wait: 200          #\u6700\u5927\u7B49\u5F85\u65F6\u95F4
+      min-idle: 5           #\u6700\u5C0F\u7A7A\u95F2\uFF08\u4FDD\u5E95\u7684\uFF09
+#      test-on-return: true  #\u5F52\u8FD8\u94FE\u63A5\u65F6\u662F\u5426\u6D4B\u8BD5 \u94FE\u63A5\u6B63\u5E38
+#      test-on-borrow: true  #\u4F7F\u7528\u94FE\u63A5\u65F6\u662F\u5426\u6D4B\u8BD5 \u94FE\u63A5\u6B63\u5E38 \u5F88\u91CD\u8981
+mybatis:
+  mapper-locations: classpath*:mapper/*.xml
